@@ -12,9 +12,27 @@ keysInObject(animals); // => ["dog", "cat", "bison"]
 keysInObject(foods); // => ["apple", "lemon", "mango"]
 ***********************************************************************/
 
+/* // using for...in loop
 function keysInObject(obj) {
-  // Your code here
+  // empty array
+  let arr = [];
+
+  // iterate over obj with for...in loop
+  for (let key in obj) {
+    // push key to arr
+    arr.push(key);
+  }
+  
+  return arr;
+} */
+
+// using Object.keys
+function keysInObject(obj) {
+  return Object.keys(obj);
 }
+
+// let animals = {dog: 'Wolfie', cat: 'Jet', bison: 'Bilbo'}
+// console.log(keysInObject(animals)); // => ["dog", "cat", "bison"]
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = keysInObject;
