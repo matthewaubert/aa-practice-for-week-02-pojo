@@ -28,7 +28,17 @@ console.log(countScores(peeps)); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 ***********************************************************************/
 
 function countScores(people) {
-  // Your code here
+  // new obj
+  let newObj = {};
+
+  // for each obj in people array
+  people.forEach(function(obj) {
+    // if obj.name exists as key in newObj, add value of obj.score to value in newObj
+    // else create new key - value pair in newObj for name and score
+    newObj[obj.name] = newObj[obj.name] + obj.score || obj.score;
+  });
+
+  return newObj;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
