@@ -12,7 +12,19 @@ console.log(stringConverter("raccoon")); // => {r: 1, a: 1, c: 2, o: 2, n: 1}
 ***********************************************************************/
 
 function stringConverter(string) {
-  // Your code here
+  // split string into array
+  let arr = string.split("");
+  // empty object
+  let obj = {};
+
+  // for each char in array
+  arr.forEach(function(char) {
+    // if char exists in obj as key, increment value
+    // else make new key with value of 1
+    obj[char] = (obj[char] + 1) || 1;
+  })
+    
+  return obj;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
