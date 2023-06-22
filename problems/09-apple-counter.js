@@ -29,7 +29,14 @@ appleCounter(obj3); // => 3
 ***********************************************************************/
 
 function appleCounter(appleObj) {
-  // Your code here
+  // array of object keys
+  let keys = Object.keys(appleObj);
+  // filter out objects that don't contain apple
+  let appleKeys = keys.filter(function(key) {
+    return key.toLowerCase().includes('apple');
+  });
+  // return length of array
+  return appleKeys.length;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
