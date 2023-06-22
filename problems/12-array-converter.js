@@ -12,7 +12,17 @@ console.log(arrayConverter(["apple", "banana", "potato", "banana"])); // => {app
 ***********************************************************************/
 
 function arrayConverter(array) {
-  // Your code here
+  // new object
+  let obj = {};
+
+  // for each element in array
+  array.forEach(function(el) {
+    // if element exists as key in object, increment value of key equivalent to element
+    // else create new key in object with value of 1
+    obj[el] = (obj[el] + 1) || 1;
+  });
+  
+  return obj;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
